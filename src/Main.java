@@ -6,18 +6,25 @@ public class Main {
 
         Subject group1 = new Subject("Группа 1");
         Subject group2 = new Subject("Группа 2");
+        Subject group3 = new Subject("Группа 3");
+        Subject group4 = new Subject("Группа 4");
 
         User user1 = new User("Пользователь 1");
         User user2 = new User("Пользователь 2");
 
         user1.subscribeTo(group1);
         user1.subscribeTo(group2);
-
+        user1.subscribeTo(group3);
 
         user2.subscribeTo(group1);
         user2.subscribeTo(group2);
+        user2.subscribeTo(group3);
+        user2.subscribeTo(group4);
 
         group1.postNotification("Что-то произошло в группе 1");
+        group2.postNotification("Что-то произошло в группе 2");
+        group3.postNotification("Что-то произошло в группе 3");
+        group4.postNotification("Что-то произошло в группе 4");
 
     }
 }
